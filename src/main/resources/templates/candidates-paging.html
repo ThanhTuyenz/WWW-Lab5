@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Candidates with Pagination</title>
+</head>
+<body>
+<h2>Paged Candidates List</h2>
+<table>
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Full Name</th>
+        <th>Date of Birth</th>
+        <th>Address</th>
+        <th>Phone</th>
+        <th>Email</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="candidate : ${candidatePage.content}">
+        <td th:text="${candidate.id}"></td>
+        <td th:text="${candidate.fullName}"></td>
+        <td th:text="${candidate.dob}"></td>
+        <td th:text="${candidate.address.street}"></td>
+        <td th:text="${candidate.phone}"></td>
+        <td th:text="${candidate.email}"></td>
+    </tr>
+    </tbody>
+</table>
+<div>
+        <span th:each="page : ${pageNumbers}">
+            <a th:href="@{/candidates(page=${page}, size=10)}" th:text="${page}"></a>
+        </span>
+</div>
+</body>
+</html>
