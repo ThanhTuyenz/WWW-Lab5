@@ -70,10 +70,8 @@ Phát triển ứng dụng web bằng **Spring Boot** dựa trên yêu cầu sau
 
 ## Kết quả thực hiện
 1. **Endpoint `/list`:** Hiển thị danh sách ứng viên (không phân trang).  
-   ![Danh sách ứng viên](https://via.placeholder.com/800x400.png?text=Hiển+thị+danh+sách+ứng+viên)  
 
 2. **Endpoint `/candidates`:** Hiển thị danh sách ứng viên với phân trang.  
-   ![Phân trang ứng viên](https://via.placeholder.com/800x400.png?text=Hiển+thị+ứng+viên+phân+trang)  
 
 ---
 
@@ -81,12 +79,12 @@ Phát triển ứng dụng web bằng **Spring Boot** dựa trên yêu cầu sau
 1. **Cấu hình cơ sở dữ liệu:**
    - Mở file `application.properties` và thay đổi thông tin:
      ```properties
-     spring.datasource.url=jdbc:mariadb://localhost:3306/ten_database
-     spring.datasource.username=ten_nguoi_dung
-     spring.datasource.password=mat_khau
+     spring.datasource.url=jdbc:mariadb://localhost:3306/lab5
+     spring.datasource.username=root
+     spring.datasource.password=sapassword
      ```
 2. **Chạy ứng dụng:**
-   - Mở **IntelliJ IDEA**, chạy file `LabWeek05Application.java`.  
+   - Mở **IntelliJ IDEA**, chạy file `Lab5Application.java`.  
    - Truy cập các endpoint:
      - `http://localhost:8080/list` - Hiển thị danh sách ứng viên.
      - `http://localhost:8080/candidates` - Hiển thị danh sách ứng viên phân trang.  
